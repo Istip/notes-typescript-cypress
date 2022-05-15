@@ -29,6 +29,11 @@ const App: FC = () => {
     setDays(0);
   };
 
+  const completeNote = (id: number): void => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  };
+
   return (
     <>
       <div className="header">
@@ -65,11 +70,21 @@ const App: FC = () => {
         </form>
       </div>
 
-      <div className="notesWrapper">
-        {notes.map((note: INote) => (
-          <Note key={note.id} note={note} />
-        ))}
+      <div className="center">
+        <h1>Notes:</h1>
       </div>
+
+      {notes.length ? (
+        <div className="notesWrapper">
+          {notes.map((note: INote) => (
+            <Note key={note.id} note={note} completeNote={completeNote} />
+          ))}
+        </div>
+      ) : (
+        <div className="center">
+          <h3>No notes on your list...</h3>
+        </div>
+      )}
     </>
   );
 };

@@ -3,9 +3,10 @@ import './Note.css';
 
 interface Props {
   note: INote;
+  completeNote(id: number): void;
 }
 
-const Note = ({ note }: Props) => {
+const Note = ({ note, completeNote }: Props) => {
   const daysToFinish = (): string | undefined => {
     if (note.days === 0) {
       return 'Today has to be finished!';
@@ -28,7 +29,7 @@ const Note = ({ note }: Props) => {
       </div>
 
       <div>
-        <button className="hello">
+        <button className="hello" onClick={() => completeNote(note.id)}>
           <b>❌</b>
         </button>
       </div>
