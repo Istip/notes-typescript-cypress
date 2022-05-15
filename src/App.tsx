@@ -1,9 +1,14 @@
-function App() {
+import { FC } from 'react';
+import Header from './components/Header';
+import Notes from './components/Notes';
+
+const App: FC = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <>
+      <Header />
+      <Notes />
+    </>
   );
-}
+};
 
 export default App;

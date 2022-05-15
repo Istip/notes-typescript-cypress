@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(238, 238, 248);
+  border-bottom: 1px solid rgb(172, 172, 209);
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  height: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonWrapper {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+input {
+  all: unset;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid rgb(172, 172, 209);
+}
+
+input:first-child {
+  border-radius: 10px 0 0 0;
+  border-bottom: none;
+}
+
+input:last-child {
+  border-radius: 0 0 0 10px;
+}
+
+button {
+  padding: 10px 40px;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid rgb(172, 172, 209);
+  background: rgb(172, 172, 209);
+}
