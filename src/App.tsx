@@ -65,11 +65,11 @@ const App: FC = () => {
         </form>
       </div>
 
-      <>
+      <div className="notesWrapper">
         {notes.map((note: INote) => (
           <Note key={note.id} note={note} />
         ))}
-      </>
+      </div>
     </>
   );
 };
